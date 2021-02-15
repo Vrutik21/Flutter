@@ -2,6 +2,7 @@ import 'package:flutter/material.dart' show Brightness, BuildContext, Colors, Ma
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newapp/pages/home.dart';
 import 'package:newapp/pages/login.dart';
+import 'package:newapp/pages/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -25,8 +26,8 @@ class MyApp extends StatelessWidget {
     
     routes: {
       "/":(context) => LoginPage(),
-      "/home":(context) => HomePage(),
-      "/login":(context) => LoginPage(),
+      MyRoutes.homeRoute:(context) => HomePage(),
+      MyRoutes.loginRoute:(context) => LoginPage(),
       },
     );
   }
