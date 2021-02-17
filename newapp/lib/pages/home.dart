@@ -8,8 +8,11 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Umang")),
-      ),
+        title: Center(child: Text("Umang",style: TextStyle(fontWeight: FontWeight.bold),
+        )
+        ),
+        backgroundColor: Colors.deepPurpleAccent,
+        ),
       body: Center(
         child: Container(
           child: Text("Welcome to $days days of my first $name app"),
