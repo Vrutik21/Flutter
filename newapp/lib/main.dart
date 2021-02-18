@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
    
     routes: {
-      "/":(context) => HomePage(),
+      "/":(context) => LoginPage(),
       MyRoutes.homeRoute:(context) => HomePage(),
       MyRoutes.loginRoute:(context) => LoginPage(),
       },
