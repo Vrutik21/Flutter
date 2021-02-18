@@ -3,7 +3,7 @@ import 'package:newapp/widgets/drawer.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  int days = 30;
+  int days = 1;
   String name = "Umang";
   @override
   Widget build(BuildContext context) {
@@ -12,11 +12,10 @@ class HomePage extends StatelessWidget {
         title: Center(child: Text("Umang",style: TextStyle(fontWeight: FontWeight.bold),
         )
         ),
-        backgroundColor: Colors.deepPurpleAccent,
         ),
       body: Center(
         child: Container(
-          child: Text("Welcome to $days days of my first $name app",style: TextStyle(fontWeight: FontWeight.bold),
+          child: Text("Welcome to $days day of our $name app",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15),
           ),
         ),
       ),

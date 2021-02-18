@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart' show Brightness, BuildContext, Colors, MaterialApp, StatelessWidget, ThemeData, ThemeMode, Widget, runApp;
+import 'package:flutter/material.dart' show AppBarTheme, Brightness, BuildContext, Colors, IconThemeData, MaterialApp, StatelessWidget, ThemeData, ThemeMode, Widget, runApp;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newapp/pages/home.dart';
 import 'package:newapp/pages/login.dart';
 import 'package:newapp/pages/routes.dart';
+import 'package:newapp/pages/themes.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,15 +17,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primaryColor: Colors.cyan,
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: GoogleFonts.lato().fontFamily
-        ),
+      theme: Mytheme.lightTheme(context),
+      darkTheme: Mytheme.darkTheme(context),
         debugShowCheckedModeBanner: false,
-      darkTheme: ThemeData(brightness: Brightness.dark),
-
-    
+   
     routes: {
       "/":(context) => HomePage(),
       MyRoutes.homeRoute:(context) => HomePage(),
