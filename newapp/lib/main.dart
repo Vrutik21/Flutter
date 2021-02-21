@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart' show AppBarTheme, Brightness, BuildContext, Colors, IconThemeData, MaterialApp, StatelessWidget, ThemeData, ThemeMode, Widget, runApp;
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart' show BuildContext, MaterialApp, StatelessWidget, ThemeMode, Widget, runApp;
 import 'package:newapp/pages/home.dart';
 import 'package:newapp/pages/login.dart';
 import 'package:newapp/pages/routes.dart';
