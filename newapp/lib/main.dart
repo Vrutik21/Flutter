@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' show Brightness, BuildContext, Colors, MaterialApp, StatelessWidget, ThemeData, ThemeMode, Widget, runApp;
 import 'package:google_fonts/google_fonts.dart';
-import 'package:newapp/pages/home.dart';
+import 'package:newapp/dashboard.dart';
 import 'package:newapp/pages/login.dart';
 import 'package:newapp/pages/routes.dart';
 
@@ -26,8 +26,9 @@ class MyApp extends StatelessWidget {
 
     
     routes: {
-      "/":(context) => HomePage(),
-      MyRoutes.homeRoute:(context) => HomePage(),
+      "/":(context) => Dashboard(),
+      
+      MyRoutes.dashRoute:(context) => Dashboard(),
       MyRoutes.loginRoute:(context) => LoginPage(),
       },
     );

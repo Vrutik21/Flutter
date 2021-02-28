@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:newapp/pages/routes.dart';
 
@@ -19,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
         changedButton = true;
       });
       await Future.delayed(Duration(seconds: 1));
-      await Navigator.pushNamed(context, MyRoutes.homeRoute);
+      await Navigator.pushNamed(context, MyRoutes.dashRoute);
       setState(() {
         changedButton = false;
       });
