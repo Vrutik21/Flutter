@@ -60,40 +60,10 @@ class _DashboardState extends State<Dashboard> {
             crossAxisCount: 2,
             padding: EdgeInsets.all(3.0),
             children: <Widget>[
-              makedashboarditem(
-                  "Scheduler",
-                  IconButton(
-                      icon: Icon(
-                        Icons.calendar_today,
-                        size: 90,
-                      ),
-                      onPressed: () {
-                        Navigator.pushNamed(context, '/login');
-                      })),
-              makedashboarditem(
-                  "Profile",
-                  IconButton(
-                      icon: Icon(
-                        Icons.person,
-                        size: 90,
-                      ),
-                      onPressed: () {})),
-              makedashboarditem(
-                  "Analysis",
-                  IconButton(
-                      icon: Icon(
-                        CupertinoIcons.graph_square,
-                        size: 90,
-                      ),
-                      onPressed: () {})),
-              makedashboarditem(
-                  "Edit Meeting",
-                  IconButton(
-                      icon: Icon(
-                        CupertinoIcons.person_3_fill,
-                        size: 90,
-                      ),
-                      onPressed: () {})),
+              makedashboarditem("Scheduler", Icons.calendar_today,),
+              makedashboarditem("Profile", CupertinoIcons.person_fill),
+              makedashboarditem("Analysis", CupertinoIcons.graph_square),
+              makedashboarditem("Edit Meeting", CupertinoIcons.person_3_fill),
             ],
           ),
         ),
@@ -101,7 +71,10 @@ class _DashboardState extends State<Dashboard> {
     );
   }
 
-  Card makedashboarditem(String title, IconButton icon) {
+  Card makedashboarditem(
+    String title,
+    IconData icon,
+  ) {
     return Card(
       color: Colors.deepPurpleAccent,
       elevation: 5.0,
@@ -116,10 +89,8 @@ class _DashboardState extends State<Dashboard> {
           verticalDirection: VerticalDirection.down,
           children: <Widget>[
             SizedBox(height: 40.0),
-            Container(
-              child: icon,
-            ),
-            SizedBox(height: 60.0),
+            Container(child: Icon(icon, size: 90)),
+            SizedBox(height: 20.0),
             new Center(
               child: new Text(title,
                   style: new TextStyle(
