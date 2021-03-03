@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart' show Brightness, BuildContext, Colors, MaterialApp, StatelessWidget, ThemeData, ThemeMode, Widget, runApp;
+import 'package:flutter/material.dart' show Brightness, BuildContext, Colors, MaterialApp, ThemeData, ThemeMode, Widget, runApp;
+// ignore: implementation_imports
+import 'package:flutter/src/widgets/framework.dart' show BuildContext, State, StatefulWidget, Widget;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:newapp/dashboard.dart';
 import 'package:newapp/pages/login.dart';
@@ -9,9 +11,16 @@ void main() {
 }
 
 // ignore: must_be_immutable
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   int days = 30;
+
   String name = "Vrutik";
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -26,7 +35,7 @@ class MyApp extends StatelessWidget {
 
     
     routes: {
-      "/":(context) => Dashboard(),
+      "/":(context) => LoginPage(),
       
       MyRoutes.dashRoute:(context) => Dashboard(),
       MyRoutes.loginRoute:(context) => LoginPage(),
