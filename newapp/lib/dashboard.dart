@@ -1,3 +1,4 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:newapp/widgets/drawer.dart';
@@ -60,6 +61,7 @@ class _DashboardState extends State<Dashboard> {
             crossAxisCount: 2,
             padding: EdgeInsets.all(3.0),
             children: <Widget>[
+              
               makedashboarditem("Scheduler", Icons.calendar_today,),
               makedashboarditem("Profile", CupertinoIcons.person_fill),
               makedashboarditem("Analysis", CupertinoIcons.graph_square),
@@ -74,6 +76,8 @@ class _DashboardState extends State<Dashboard> {
   Card makedashboarditem(
     String title,
     IconData icon,
+    
+    
   ) {
     return Card(
       color: Colors.deepPurpleAccent,
